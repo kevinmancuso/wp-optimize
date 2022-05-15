@@ -58,8 +58,6 @@ if( !is_admin() && !is_user_logged_in() ) {
         }
     }
     add_filter( 'style_loader_tag', 'add_preload_attribute', 10, 2 );
-
-
     // defer external scripts
     add_filter('deferred_scripts', function($scripts) {
         $all_scripts = handle_retrieval(false,true);
